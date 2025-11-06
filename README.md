@@ -168,15 +168,63 @@ All endpoints are RESTful and accessible under the base path `/api`.
   "unblockDates": ["2025-11-05"]
 }
 ```
+
+  
 ## 📸 Screenshots
 
+
+
 <p align="center">
-  <img src="./screenshots/customer.gif" alt="Customer Browsing" width="80%">
+  <img src="https://img.shields.io/badge/🏠_Home_Page-FF69B4?style=for-the-badge&logoColor=white" alt="Home Page">
 </p>
 
 <p align="center">
-  <img src="./screenshots/admin.gif" alt="Admin Dashboard" width="80%">
+  <img src="./Assets/home.png" alt="Home Page" width="80%">
 </p>
+<hr>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🛠️ Admin Dashboard-FF69B4?style=for-the-badge&logoColor=white" alt="Home Page">
+</p>
+
+<p align="center">
+  <img src="./Assets/admin.png" alt="Admin Dashboard" width="80%">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🏨 Venue List-FF69B4?style=for-the-badge&logoColor=white" alt="Home Page">
+</p>
+
+<p align="center">
+  <img src="./Assets/venueList.png" alt="Venue List" width="80%">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/📝 Booking Form-FF69B4?style=for-the-badge&logoColor=white" alt="Home Page">
+</p>
+
+<p align="center">
+  <img src="./Assets/bookingform.png" alt="Booking Form" width="80%">
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/📅 Recent Bookings-FF69B4?style=for-the-badge&logoColor=white" alt="Home Page">
+</p>
+
+<p align="center">
+  <img src="./Assets/recentBooking.png" alt="Recent Booking" width="80%">
+</p>
+
+
+
+
+
 
 ## 🤝 Contributing
 
