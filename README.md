@@ -56,3 +56,149 @@ It provides a smooth **customer experience** for browsing & booking, and a power
 ```bash
 git clone https://github.com/komalrathore0521/BookVenue.git
 cd BookVenue
+```
+### 🗄️ 2) Backend (Spring Boot)
+
+**Create the database:**
+```sql
+CREATE DATABASE bookvenue;
+```
+
+**Configure `backend/src/main/resources/application.properties`:**
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/bookvenue
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+server.port=8081
+```
+### 🖥️ 3) Frontend (React + Vite)
+
+**Install & run:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+**Run backend:**
+```bash
+cd backend
+mvn spring-boot:run
+```
+##### Backend will start at: http://localhost:8081
+
+##### Create frontend/.env (API base URL):
+
+ **VITE_REACT_APP_API_URL=http://localhost:8081/api**
+
+
+##### Frontend dev server: http://localhost:5173
+## 🔗 Environment Variables (Quick Ref)
+
+**Backend**
+- `spring.datasource.url` – JDBC URL for Postgres  
+- `spring.datasource.username` / `spring.datasource.password`  
+- `server.port` – default `8081`
+
+**Frontend**
+- `VITE_REACT_APP_API_URL` – e.g. `http://localhost:8081/api`
+
+## 📚 API Overview
+
+Below is the complete list of API endpoints for **BookVenue**, grouped by modules.  
+All endpoints are RESTful and accessible under the base path `/api`.
+
+---
+
+### 🏨 Venue APIs
+
+| Method | Endpoint | Description | Auth Required |
+|:-------|:----------|:-------------|:---------------|
+| **GET** | `/api/venues` | Get all venues | ❌ |
+| **GET** | `/api/venues/{id}` | Get details of a specific venue by ID | ❌ |
+| **POST** | `/api/venues` | Create a new venue | ✅ (Admin) |
+| **PUT** | `/api/venues/{id}` | Update venue details | ✅ (Admin) |
+| **DELETE** | `/api/venues/{id}` | Delete a venue | ✅ (Admin) |
+| **PUT** | `/api/venues/{id}/availability` | Update blocked/unblocked dates for a venue | ✅ (Admin) |
+
+---
+
+### 📅 Booking APIs
+
+| Method | Endpoint | Description | Auth Required |
+|:-------|:----------|:-------------|:---------------|
+| **GET** | `/api/bookings` | Get all bookings | ✅ (Admin) |
+| **GET** | `/api/bookings/{id}` | Get booking by ID | ✅ |
+| **GET** | `/api/bookings/recent` | Get recent bookings | ✅ |
+| **POST** | `/api/bookings` | Create a new booking | ❌ (User) |
+| **PUT** | `/api/bookings/{id}` | Update a booking | ✅ |
+| **DELETE** | `/api/bookings/{id}` | Delete a booking | ✅ |
+
+---
+
+### 🧩 Example JSON Payloads
+
+**Create Venue**
+```json
+{
+  "name": "Royal Palace Banquet Hall",
+  "location": "Raipur",
+  "capacity": 300,
+  "pricePerHour": 2500,
+  "description": "Spacious hall ideal for weddings and corporate events."
+}
+```
+**Create Booking**
+```json
+{
+  "userName": "Komal Rathore",
+  "userEmail": "komalrathore0521@gmail.com",
+  "venueId": 1,
+  "bookingDate": "2025-11-08",
+  "hoursBooked": 5
+}
+```
+**Update Availability**
+```json
+{
+  "blockDates": ["2025-11-10", "2025-11-12"],
+  "unblockDates": ["2025-11-05"]
+}
+```
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./screenshots/customer.gif" alt="Customer Browsing" width="80%">
+</p>
+
+<p align="center">
+  <img src="./screenshots/admin.gif" alt="Admin Dashboard" width="80%">
+</p>
+
+## 🤝 Contributing
+
+1. Fork the repository  
+2. Create a new branch:  
+   ```bash
+   git checkout -b feat/your-feature
+   ```
+3. Commit Your Changes
+   ```bash   
+   git commit -m "feat: add your feature"
+   ```
+4. Push to your branch:
+   ```bash   
+   git push origin feat/your-feature
+   ```
+5. Open a Pull Request
+         
+   ## 👩‍💻 Author
+
+**Kumari Komal**  
+🔗 [LinkedIn](https://linkedin.com/in/kumari-komal-6b08191a0) · [GitHub](https://github.com/komalrathore0521) · ✉️ [komalrathore0521@gmail.com](mailto:komalrathore0521@gmail.com)
+
+
+
